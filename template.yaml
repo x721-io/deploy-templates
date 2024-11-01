@@ -7,7 +7,7 @@ dataSources:
     network: {{network}}
     source:
       address: "{{nftitem.address}}"
-      abi: URC721
+      abi: URC1155
       startBlock: {{startBlock}}
     mapping:
       kind: ethereum/events
@@ -17,9 +17,13 @@ dataSources:
         - Item
         - Owner
       abis:
-        - name: URC721
-          file: ./abis/URC721.json
+        - name: URC1155
+          file: ./abis/URC1155.json
       eventHandlers:
-        - event: Transfer(indexed address,indexed address,indexed uint256)
+        - event: TransferSingle(indexed address,indexed address,indexed address,uint256,uint256)
           handler: handleTransfer
+        - event: URI(string,indexed uint256)
+          handler: handleURI
+        - event: TransferBatch(indexed address,indexed address,indexed address,uint256[],uint256[])
+          handler: handleTransferBatch
       file: ./src/event.ts

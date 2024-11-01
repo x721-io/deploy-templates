@@ -2,9 +2,9 @@ type Item @entity {
   id: ID!
   tokenID: BigInt!
   tokenURI: String!
-  owner: User!
+  balance: BigInt!
+  owner: [UserBalance!]! @derivedFrom(field: "token")
   createdAt: BigInt!
-  updatedAt: BigInt!
 }
 
 type MetadataUpdateRecord @entity {
@@ -13,9 +13,19 @@ type MetadataUpdateRecord @entity {
   actor: User!
 }
 
+type UserBalance @entity {
+  id: ID!
+	owner: User!
+	balance: BigInt!
+	burnQuantity: BigInt!
+	token: Item!
+	lastUpdated: BigInt!
+  stakedAmount: BigInt!
+}
+
 type User @entity {
   id: ID!
-  items: [Item!]! @derivedFrom(field: "owner")
+  items: [UserBalance!]! @derivedFrom(field: "owner")
 }
 
 type TransferHistory @entity {
@@ -25,4 +35,5 @@ type TransferHistory @entity {
   from: User!
   to: User!
   transferAt: BigInt!
+  quantity: BigInt!
 }

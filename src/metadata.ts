@@ -1,7 +1,6 @@
 // import {ContractAddress} from "./const";
-// import {MetadataUpdate} from "../generated/NFTItem/URC4906";
 // import {Item, MetadataUpdateRecord, User} from "../generated/schema";
-// import {URC721} from "../generated/NFTItem/URC721";
+// import {URC1155, URI} from "../generated/NFTItem/URC1155";
 
 // export function metadataUpdate(event: MetadataUpdate): void {
 //   /* load the token from the existing Graph Node */
@@ -30,10 +29,4 @@
 //     updateRecord.tokenID = event.params._tokenId;
 //     updateRecord.save();
 //   }
-
-
-
-
 // }
-
-

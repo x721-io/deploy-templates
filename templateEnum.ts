@@ -10,3 +10,7 @@ export namespace ContractAddressConst {
     export const erc721marketplace = "{{erc721marketplace.address}}".toLowerCase()
     export const erc1155marketplace = "{{erc1155marketplace.address}}".toLowerCase()
 }
+
+export const ZERO = "0x0000000000000000000000000000000000000000"
+export const DEAD = "0x000000000000000000000000000000000000dEaD".toLowerCase()
+
