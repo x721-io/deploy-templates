@@ -4,9 +4,9 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "create-local": "graph create --node http://localhost:8020/ u2u/nft-template",
-    "remove-local": "graph remove --node http://localhost:8020/ u2u/nft-template",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 u2u/nft-template -l v0.0.1",
+    "create-local": "graph create --node http://localhost:8020/ u2u/u2u-bitget",
+    "remove-local": "graph remove --node http://localhost:8020/ u2u/u2u-bitget",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 u2u/u2u-bitget -l v0.0.1",
     "prepare:mainnet": "mustache ./config/mainnet.json template.yaml > subgraph.yaml && mustache ./config/mainnet.json ./templateEnum.ts > ./src/const.ts",
     "prepare:testnet": "mustache ./config/testnet.json template.yaml > subgraph.yaml && mustache ./config/testnet.json ./templateEnum.ts > ./src/const.ts",
     "test": "graph test"

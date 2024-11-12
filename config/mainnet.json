@@ -1,13 +1,13 @@
 {
   "network": "mainnet",
-  "startBlock": "38107079",
+  "startBlock": "20946102",
   "nftitem": {
-    "address": "0xb2cC2dFB88B9f43Eb61D185A93C655F89DB16f97"
+    "address": "0x2ac49144a804e1f8652e1a0c1bad90606ac2094a"
   },
   "erc721marketplace": {
-    "address": "0x77700afc1183e520f6ce28e5ee95411cc88cf36b"
+    "address": "0x80a2d549e5e5d32e0f009c3a23422d89777f5eed"
   },
   "erc1155marketplace": {
-    "address": "0x571e3b002ee611fb0fd240c0ca2c85b6dd4e7e33"
+    "address": "0xc4b56a14c2cc7300391d4d9fa30c7a2a1f1a76b2"
   }
 }
